@@ -1,0 +1,17 @@
+{
+  "name": "chat-app-FULLSTACK",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/CodePapi/chat-app-FULLSTACK.git",
+  "author": "Samuel Egbajie (MAJ0R) <49847624+CodePapi@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8",
+    "socket.io": "^3.0.4"
+  },
+  "scripts": {
+    "start": "nodemon server"
+  }
+}
