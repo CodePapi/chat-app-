@@ -1,5 +1,3 @@
-const mongoose = require("mongoose")
-// const User = mongoose.model("User")
 const User = require("../models/User")
 const sha256 = require("js-sha256")
 const jwt = require("jwt-then")
