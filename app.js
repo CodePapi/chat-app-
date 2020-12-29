@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 //register controllers
 app.use("/user",require("./routers/User"))
-
+app.use("/chatroom",require("./routers/Chatroom"))
 //setup error handlers
 const errorHandlers = require("./Handlers/error-handlers")
 app.use(errorHandlers.notFound)
