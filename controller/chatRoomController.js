@@ -17,3 +17,9 @@ exports.createChatroom = async (req, res) => {
         name
 })
 }
+
+exports.getAllChatRoom = async (req, res) => {
+    const chatrooms = await Chatroom.find({})
+    
+    res.json(chatrooms)
+}
