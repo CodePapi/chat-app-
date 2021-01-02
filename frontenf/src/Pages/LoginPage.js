@@ -1,5 +1,5 @@
 import React from "react";
-// import makeToast from "../Toaster";
+import makeToast from "../Toaster";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 
@@ -12,12 +12,12 @@ const LoginPage = (props) => {
     const password = passwordRef.current.value;
 
     axios
-      .post("http://localhost:8000/user/login", {
+      .post("http://localhost:2000/user/login", {
         email,
         password,
       })
       .then((response) => {
-        // makeToast("success", response.data.message);
+        makeToast("success", response.data.message);
         localStorage.setItem("CC_Token", response.data.token);
         props.history.push("/dashboard");
         props.setupSocket();
