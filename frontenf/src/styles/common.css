@@ -23,7 +23,9 @@ body {
 }
 
 .cardHeader {
-  background: #f7c52a;
+background: green;
+color: #fff;
+
   padding: 0.75rem 1.5rem;
   border-radius: 2px;
   text-transform: uppercase;
