@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-// import makeToast from "../Toaster";
+import makeToast from "../Toaster";
 
 const RegisterPage = (props) => {
   const nameRef = React.createRef();
@@ -13,13 +13,13 @@ const RegisterPage = (props) => {
     const password = passwordRef.current.value;
 
     axios
-      .post("http://localhost:8000/user/register", {
+      .post("http://localhost:2000/user/register", {
         name,
         email,
         password,
       })
       .then((response) => {
-        // makeToast("success", response.data.message);
+        makeToast("success", response.data.message);
         props.history.push("/login");
       })
       .catch((err) => {
@@ -30,8 +30,7 @@ const RegisterPage = (props) => {
           err.response.data &&
           err.response.data.message
         )
-        //   makeToast("error", err.response.data.message);
-            console.log("success")
+          makeToast("error", err.response.data.message);
       });
   };
 
