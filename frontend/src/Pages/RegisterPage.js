@@ -13,7 +13,7 @@ const RegisterPage = (props) => {
     const password = passwordRef.current.value;
 
     axios
-      .post("http://localhost:2000/user/register", {
+      .post("/user/register", {
         name,
         email,
         password,
