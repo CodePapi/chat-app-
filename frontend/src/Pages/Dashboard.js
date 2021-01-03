@@ -6,7 +6,7 @@ const DashboardPage = (props) => {
   const [chatrooms, setChatrooms] = React.useState([]);
   const getChatrooms = () => {
     axios
-      .get("http://localhost:2000/chatroom", {
+      .get("/chatroom", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("CC_Token"),
         },
@@ -34,7 +34,7 @@ const DashboardPage = (props) => {
    
 
     axios
-      .post("http://localhost:2000/chatroom",  {
+      .post("/chatroom",  {
         name
       },{
         headers: {
@@ -69,7 +69,7 @@ const DashboardPage = (props) => {
             type="text"
             name="name"
             id="name"
-              placeholder="ChatterBox Nepal"
+              placeholder="eg. Nigerian Developers"
                ref={nameRef}
           />
         </div>

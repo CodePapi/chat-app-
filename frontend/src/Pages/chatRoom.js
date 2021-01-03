@@ -91,31 +91,3 @@ const ChatroomPage = ({ match, socket }) => {
 
 export default withRouter(ChatroomPage);
 
-
-// import React from 'react'
-// import io from "socket.io-client"
-
-
-// function chatRoom({ match }) {
-//   // const say = () => {
-//   //    console.log(socket)
-//   // }
-//    const chatroomID = match.params.id
-//   // const socket = io("http://localhost:2000", {
-//   // query: {
-//   //  token:localStorage.getItem("CC_Token")
-//   //   }
-  
-//   // })
-//   // socket.on("connect", say())
-  
- 
- 
-//   return (
-//     <div>
-//        chatroom {chatroomID}
-//     </div>
-//   )
-// }
-
-// export default chatRoom
